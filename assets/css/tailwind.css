@@ -1,0 +1,326 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Poppins, sanf-serif;
+}
+
+.auth-form {
+  @apply block w-full px-6 py-4 rounded-full text-gray-800 transition duration-300 ease-in-out;
+}
+
+.link-hover:hover {
+  border-bottom: 2px solid #fff;
+}
+.link:hover {
+  color: #1190cc;
+}
+
+.color-blue {
+  color: #1190cc;
+}
+
+.bg-blue {
+  background-color: #1190cc;
+}
+
+.color-green {
+  color: #376a4d;
+}
+
+.bg-green {
+  background-color: #376a4d;
+}
+
+.bg-button {
+  background-color: #1190cc;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+.bg-button-rounded {
+  background-color: #1190cc;
+  border: 2px solid #1190cc;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  font-weight: bold;
+}
+.bg-button-rounded-2 {
+  background-color: #fff;
+  border: 2px solid #1190cc;
+  border-radius: 30px;
+  transition: 0.4s ease;
+  font-weight: bold;
+}
+
+/* .bg-button-rounded:hover {
+  background: #fff;
+  color: #1190cc;
+} */
+/* .bg-button-rounded-2:hover {
+  background: #1190cc;
+  color: #fff;
+} */
+
+.bg-button-green {
+  background-color: #376a4d;
+  border-radius: 10px;
+  transition: 0.4s ease;
+}
+
+.btn-redirect-blue {
+  border: 2px solid #1190cc;
+  border-radius: 30px;
+  color: #1190cc;
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+.btn-redirect-blue:hover {
+  background: #fff;
+}
+.btn-redirect {
+  border: 2px solid #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  transition: 0.4s ease;
+}
+.btn-redirect:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.bg-button:hover,
+.btn-redirect-blue:hover,
+.btn-redirect:hover,
+.bg-button-rounded-2:hover,
+.bg-button-rounded:hover,
+.bg-button-green:hover {
+  box-shadow: 7px 5px 24px rgba(0, 0, 0, 0.3);
+  transform: scale(1.02);
+}
+
+.progress-striped {
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.15) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(255, 255, 255, 0.15) 50%,
+    rgba(255, 255, 255, 0.15) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 1rem 1rem;
+}
+
+.project-header {
+  background-image: url("/bg-header.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 380px;
+}
+
+@media (max-width: 600px) {
+  .project-header {
+    height: 280px;
+  }
+}
+
+.dashboard-header {
+  background-image: url("/bg-header.png");
+  background-position: top right;
+  background-repeat: no-repeat;
+  height: 65px;
+}
+
+.header__bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 750px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-image: url("/bg-header.png");
+}
+
+@media (max-width: 422px) {
+  .header__bg {
+    height: 113%;
+    background-position: top center;
+    background-image: url("/bg-header-mobile.png");
+  }
+}
+
+.cta-clip {
+  position: relative;
+  top: 200px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 300px;
+  background-position: top right;
+  background-size: 300px;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  transform: skewY(4deg);
+  transform-origin: bottom right;
+}
+
+.card-project {
+  transition: all 0.3s ease 0s, opacity 0.5s cubic-bezier(0.5, 0, 0, 1) 1ms;
+  overflow: hidden;
+}
+.card-project .button-cta {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+.card-project:hover {
+  box-shadow: 0 4px 25px 0 rgba(0, 0, 0, 0.15);
+}
+.card-project:hover .button-cta {
+  opacity: 1;
+  transition: all 300ms ease;
+}
+/* .card-project:hover .progress-bar,
+.card-project:hover .progress-info {
+  opacity: 0;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  transition: all 300ms ease;
+} */
+
+.call-to-action {
+  position: relative;
+  z-index: 10;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-color: #376a4d;
+  margin-top: 100px;
+  z-index: 15;
+}
+
+footer .leafs-footer-img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 35%;
+}
+
+footer .leafs-footer-img2 {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  width: 22%;
+}
+
+.hero-underline {
+  text-decoration-color: #fff;
+}
+
+.testimonial-user {
+  opacity: 0.4;
+}
+.testimonial-user.active {
+  opacity: 1;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 1px #3b41e3;
+}
+
+.list-check li {
+  background: url("/icon-checklist.svg") no-repeat left 8px;
+  padding: 6px 0px 3px 28px;
+}
+
+.item-thumbnail:hover {
+  background-color: #ff872e;
+  border-radius: 20px;
+}
+.item-thumbnail:hover:after {
+  position: absolute;
+  top: 38%;
+  left: 41%;
+  content: url("/icon-thumbnail-hover.svg");
+}
+.item-thumbnail:hover img {
+  opacity: 0.3;
+}
+.item-thumbnail-remove:hover {
+  background-color: #ff2e2e;
+  border-radius: 20px;
+}
+.item-thumbnail-remove:hover:after {
+  position: absolute;
+  top: 38%;
+  left: 41%;
+  content: url("/icon-thumbnail-remove.svg");
+}
+.item-thumbnail-remove:hover img {
+  opacity: 0.3;
+}
+
+.auth-page {
+  background-image: url("/full-bg-leafs.jpg");
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.dropdown-menu li:hover {
+  color: #1190cc;
+}
+
+/* Tooltip ? */
+.v-application--wrap {
+  min-height: 3vh !important;
+  position: relative;
+}
+
+.v-btn:not(.v-btn--round).v-size--default {
+  height: 18px !important;
+  min-width: 0px !important;
+  padding: 0 5px !important;
+}
+
+/* Image Proyek */
+.img-proyek {
+  height: 250px !important;
+  width: 100% !important;
+}
+
+/* Singup & SignIN */
+.theme--light.v-counter,
+.theme--light.v-input input,
+.theme--light.v-input textarea,
+.v-messages__message,
+.theme--light.v-icon,
+.theme--light.v-input input::placeholder,
+.theme--light.v-input textarea::placeholder {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.theme--light.v-input:hover,
+.v-text-field > .v-input__control > .v-input__slot:hover {
+  border-color: rgba(255, 255, 255, 1) !important;
+}
+
+/* Empty States */
+.empty-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
