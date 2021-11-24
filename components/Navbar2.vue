@@ -4,10 +4,9 @@
       class="px-5 flex items-center justify-between flex-wrap bg-nav p-2 fixed"
     >
       <div class="flex items-center flex-no-shrink text-white mr-6">
-        <nuxt-link to="/">
-          <v-avatar class="mr-4 logo">
-            <img src="/logo-1@2x.png" alt="logo" class="h-30" /> </v-avatar
-        ></nuxt-link>
+        <nuxt-link to="/" class="mr-4 logo">
+          <img src="/logo-1@2x.png" alt="logo" class="h-30" />
+        </nuxt-link>
       </div>
       <div class="block sm:hidden" v-if="!this.$store.state.auth.loggedIn">
         <button
@@ -293,7 +292,7 @@
 @media (max-width: 600px) {
   .nav-mobile {
     position: absolute;
-    top: 60px;
+    top: 80px;
     left: 0;
     box-shadow: rgb(0 0 0 / 20%) 0px 4px 6px -1px;
     transition: transform 280ms ease 0s;

@@ -2,8 +2,8 @@
   <footer class="py-20 text-white text-lg">
     <div class="container px-5 md:px-0 mx-auto">
       <div class="sm:flex mb-4">
-        <div class="sm:w-1/2 sm:mt-0 my-8 h-auto">
-          <img src="logo-footer.svg" alt="" class="mb-3" />
+        <div class="sm:w-1/2 sm:mt-0 mt-8 h-auto">
+          <img src="/logo-footer.svg" alt="" class="mb-3" />
           <p class="font-light">Membantu Petani<br />Dapat Akses Permodalan</p>
         </div>
         <div class="sm:w-1/4 h-auto">
@@ -30,7 +30,7 @@
             <li class="mb-3">+021 2208 1996</li>
             <li class="mb-3">Bantarjati, Bogor Utara</li>
             <li class="mb-3">Kota Bogor</li>
-            <li class="mb-3">support@farmcrowdy.id</li>
+            <li class="mb-3">support@harveee.id</li>
           </ul>
         </div>
       </div>
