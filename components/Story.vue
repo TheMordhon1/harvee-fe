@@ -4,7 +4,7 @@
       <div class="w-auto">
         <h2 class="text-xl text-gray-900 mb-8">
           Kata Mereka <br />
-          Tentang <span class="text-2xl font-bold">FarmCrowdy</span>
+          Tentang <span class="text-2xl font-bold">Harveee</span>
         </h2>
       </div>
     </div>
@@ -14,9 +14,9 @@
       </div>
       <div class="w-full lg:w-8/12 mt-16">
         <h2 class="text-xl text-gray-900 font-light">
-          “FarmCrowdy adalah suatu terobosan bagi dunia pertanian di Indonesia.
+          “Harveee adalah suatu terobosan bagi dunia pertanian di Indonesia.
           <br />
-          FarmCrowdy akan memainkan peranan penting dalam melengkapi,
+          Harveee akan memainkan peranan penting dalam melengkapi,
           memberdayakan, dan menyiapkan para petani kita dalam menyambut
           tantangan dan kesempatan yang akan muncul dalam Revolusi Industri
           Keempat. ”

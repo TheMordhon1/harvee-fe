@@ -40,29 +40,29 @@
             <div class="item-meta">
               <h3
                 class="text-lg font-medium text-gray-900 mt-5"
-                v-if="campaign.name.length < 33"
+                v-if="campaign.name.length < 28"
                 :title="campaign.name"
               >
                 {{ campaign.name }}
               </h3>
               <h3
                 class="text-md lg:text-lg font-medium text-gray-900 mt-5"
-                v-if="campaign.name.length > 33"
+                v-if="campaign.name.length > 28"
                 :title="campaign.name"
               >
-                {{ campaign.name.substring(0, 33) + "..." }}
+                {{ campaign.name.substring(0, 28) + "..." }}
               </h3>
               <p
                 class="text-sm font-light text-gray-900 mb-4"
-                v-if="campaign.short_description.length < 90"
+                v-if="campaign.short_description.length < 80"
               >
                 {{ campaign.short_description }}
               </p>
               <p
                 class="text-sm font-light text-gray-900 mb-4"
-                v-if="campaign.short_description.length > 90"
+                v-if="campaign.short_description.length > 80"
               >
-                {{ campaign.short_description.substring(0, 90) + "..." }}
+                {{ campaign.short_description.substring(0, 80) + "..." }}
               </p>
               <!-- Progrees Bar -->
               <v-tooltip

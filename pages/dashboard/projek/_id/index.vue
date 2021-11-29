@@ -299,13 +299,15 @@
       </div>
 
       <!-- Gambar Proyek -->
-      <div class="flex justify-between items-center">
+      <div class="md:flex md:justify-between md:items-center">
         <div class="w-3/4 mr-6">
           <h3 class="text-xl lg:text-2xl text-gray-900 mb-4 mt-5">
             Gambar Proyek
           </h3>
         </div>
-        <div class="hidden lg:block w-2/4 text-right">
+        <div
+          class="w-full text-center md:text-right flex mt-5 lg:w-2/4 text-right"
+        >
           <input
             type="file"
             ref="file"
@@ -328,6 +330,29 @@
             Upload
           </button>
         </div>
+        <!-- <div class="hidden lg:block w-2/4 text-right">
+          <input
+            type="file"
+            ref="file"
+            @change="selectFile"
+            class="border p-1 rounded overflow-hidden mr-2"
+          />
+          <button
+            @click="upload"
+            class="
+              bg-button
+              text-white
+              font-bold
+              px-4
+              p-2
+              rounded
+              inline-flex
+              items-center
+            "
+          >
+            Upload
+          </button>
+        </div> -->
       </div>
       <div class="grid grid-cols-4 gap-4 -mx-2">
         <div
@@ -342,7 +367,7 @@
           v-for="image in campaign.data.images"
           :key="image.image_url"
         >
-          <figure class="item-thumbnail-remove" @click="remove(data.images)">
+          <figure class="item-thumbnail-remove">
             <img
               :src="$axios.defaults.baseURL + '/' + image.image_url"
               alt=""
@@ -352,34 +377,12 @@
         </div>
       </div>
       <!-- Mobile input image -->
-      <div class="lg:hidden block w-full text-center flex mt-5">
-        <input
-          type="file"
-          ref="file"
-          @change="selectFile"
-          class="border p-1 rounded overflow-hidden mr-2"
-        />
-        <button
-          @click="upload"
-          class="
-            bg-button
-            text-white
-            font-bold
-            px-4
-            p-2
-            rounded
-            inline-flex
-            items-center
-          "
-        >
-          Upload
-        </button>
-      </div>
+
       <!-- Mobile Input Image -->
       <div class="flex justify-between items-center">
         <div class="w-3/4 mr-6">
           <h3
-            class="text-xl lg:text-2xl text-gray-900 mb-2 lg:mb-4 mt-8 lg:mt-5"
+            class="text-xl lg:text-2xl text-gray-900 mb-2 lg:mb-4 mt-10 lg:mt-5"
           >
             Daftar Transaksi Masuk
           </h3>
@@ -496,10 +499,6 @@ export default {
       } catch (err) {
         console.log(err);
       }
-    },
-    remove(data) {
-      const index = this.selectedFiles.indexOf(data.images);
-      if (index >= 0) this.selectedFiles.splice(index, 1);
     },
   },
 };

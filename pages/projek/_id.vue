@@ -19,8 +19,8 @@
                   w-full
                   lg:h-66 lg:h-full
                   absolute
-                  lg:relative
-                  top-0
+                  md:relative md:top-0
+                  top-8
                   left-0
                   h-100
                 "

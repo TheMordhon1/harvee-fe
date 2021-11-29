@@ -16,7 +16,8 @@
               lg:text-4xl
               text-white
               mb-5
-              w-3/4
+              w-full
+              lg:w-3/4
             "
           >
             Platform Untuk Membantu<u class="hero-underline"> Petani</u>
@@ -30,7 +31,8 @@
               text-white text-xl
               font-light
               mb-8
-              w-3/4
+              w-full
+              lg:w-3/4
             "
           >
             Mendanai proyek yang terbaik untuk mewujudkan mimpi mereka
