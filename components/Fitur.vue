@@ -1,6 +1,6 @@
 <template lang="">
   <section class="container px-5 md:px-0 mx-auto pt-24 mt-10" id="fitur">
-    <div class="flex justify-between items-center mb-10">
+    <div class="flex justify-between items-center md:my-10 mb-10">
       <div class="w-auto">
         <h2 class="text-xl text-gray-900">
           3 Tahapan Untuk <br />
