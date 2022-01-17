@@ -52,7 +52,7 @@
             items-center
           "
         >
-          Ubah
+          Simpan
         </button>
       </div>
       <hr class="lg:hidden block my-5" />
@@ -247,7 +247,7 @@
                   >
                 </div>
 
-                <div class="w-full mb-4 px-3 mb-3">
+                <div class="w-full mb-4 px-3">
                   <label
                     class="
                       block
@@ -283,7 +283,7 @@
                   >
                 </div>
 
-                <div class="w-full mb-4 px-3 mb-3">
+                <div class="w-full mb-4 px-3">
                   <label
                     class="
                       block
@@ -317,7 +317,7 @@
                   ></textarea>
                 </div>
 
-                <div class="w-full mb-4 px-3 mb-3">
+                <div class="w-full mb-4 px-3">
                   <label
                     class="
                       block
@@ -351,7 +351,7 @@
                   ></textarea>
                 </div>
 
-                <div class="w-full mb-4 px-3 mb-3">
+                <div class="w-full mb-4 px-3">
                   <label
                     class="
                       block
@@ -385,7 +385,7 @@
                   ></textarea>
                 </div>
 
-                <div class="w-full mb-4 px-3 mb-3">
+                <div class="w-full mb-4 px-3">
                   <label
                     class="
                       block
@@ -428,28 +428,29 @@
   </div>
 </template>
 <script>
-import Vue from "vue";
 export default {
   middleware: "auth",
   async asyncData({ $axios, params }) {
     const campaign = await $axios.$get("/api/v1/projek/" + params.id);
     return { campaign };
   },
+
   methods: {
     async save() {
       try {
-        var savingSuccessful = false;
         let response = await this.$axios.$put(
           "/api/v1/projek/" + this.$route.params.id,
           {
             name: this.campaign.data.name,
             short_description: this.campaign.data.short_description,
+            address: this.campaign.data.address,
             description_komoditas: this.campaign.data.description_komoditas,
             description_prospek: this.campaign.data.description_prospek,
             description_risiko: this.campaign.data.description_risiko,
             description_kelompok_tani:
               this.campaign.data.description_kelompok_tani,
             goal_amount: this.campaign.data.goal_amount,
+            min_pembayaran: this.campaign.data.min_pembayaran,
             perks: this.campaign.data.perks.join(),
           }
         );
@@ -457,7 +458,7 @@ export default {
           name: "dashboard-projek-id",
           params: { id: response.data.id },
         });
-        console.log(response, savingSuccessful);
+        console.log(response);
       } catch (err) {
         console.log(err);
       }
@@ -468,10 +469,4 @@ export default {
   },
 };
 </script>
-<style lang="scss">
-/* form */
-// input:focus,
-// textarea:focus {
-//   background-color: yellow !important;
-// }
-</style>
+<style lang="scss"></style>

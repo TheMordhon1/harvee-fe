@@ -166,130 +166,68 @@
                 campaign.data.goal_amount - campaign.data.current_amount == 0
               "
             >
-              <div class="hidden">
-                <template v-if="this.$store.state.auth.loggedIn">
-                  <input
-                    class="
-                      border border-gray-500
-                      block
-                      w-full
-                      px-6
-                      py-3
-                      mt-4
-                      rounded-full
-                      text-gray-800
-                      transition
-                      duration-300
-                      ease-in-out
-                      focus:outline-none focus:shadow-outline
-                    "
-                    type="number"
-                    placeholder="Jumlah Dalam Rp"
-                    v-model.number="transactions.amount"
-                    @keyup.enter="fund"
-                  />
-                  <button
-                    @click="fund"
-                    class="
-                      mt-3
-                      block
-                      w-full
-                      bg-button
-                      text-white
-                      font-medium
-                      px-6
-                      py-3
-                      text-md
-                      rounded-full
-                    "
-                  >
-                    Bantu Sekarang
-                  </button>
-                </template>
-                <template v-else>
-                  <button
-                    @click="$router.push({ path: '/login' })"
-                    class="
-                      mt-3
-                      button-cta
-                      block
-                      w-full
-                      bg-button
-                      text-white
-                      font-medium
-                      px-6
-                      py-3
-                      text-md
-                      rounded-full
-                    "
-                  >
-                    Bantu Sekarang
-                  </button>
-                </template>
-              </div>
+              <!-- Terdanai -->
             </div>
             <div v-else>
-              <div class="block">
-                <template v-if="this.$store.state.auth.loggedIn">
-                  <input
-                    class="input-rp"
-                    required
-                    type="number"
-                    placeholder="Nominal Dalam Rp"
-                    v-model.number="transactions.amount"
-                    @keyup.enter="fund"
-                    :step="campaign.data.min_pembayaran"
-                    :max="
-                      campaign.data.goal_amount - campaign.data.current_amount
-                    "
-                    :min="campaign.data.min_pembayaran"
-                  />
+              <template v-if="this.$store.state.auth.loggedIn">
+                <input
+                  class="input-rp"
+                  required
+                  type="number"
+                  placeholder="Nominal Dalam Rp"
+                  v-model.number="transactions.amount"
+                  @keyup.enter="fund"
+                  :step="campaign.data.min_pembayaran"
+                  :max="
+                    campaign.data.goal_amount - campaign.data.current_amount
+                  "
+                  :min="campaign.data.min_pembayaran"
+                />
 
-                  <button
-                    @click="fund"
-                    class="
-                      mt-3
-                      button-cta
-                      block
-                      w-full
-                      bg-button
-                      hover:bg-green-button
-                      text-white
-                      font-medium
-                      px-6
-                      py-3
-                      text-md
-                      rounded-full
-                      text-center
-                    "
-                  >
-                    Bantu Sekarang
-                  </button>
-                </template>
-                <template v-else>
-                  <a
-                    target="_blank"
-                    @click="$router.push({ path: '/login' })"
-                    class="
-                      mt-5
-                      button-cta
-                      block
-                      w-full
-                      bg-button-rounded
-                      text-white
-                      font-medium
-                      px-6
-                      py-3
-                      text-md
-                      rounded-full
-                      text-center
-                      cursor-pointer
-                    "
-                  >
-                    Login Dulu
-                  </a>
-                </template>
-              </div>
+                <button
+                  @click="fund"
+                  class="
+                    mt-3
+                    button-cta
+                    block
+                    w-full
+                    bg-button
+                    hover:bg-green-button
+                    text-white
+                    font-medium
+                    px-6
+                    py-3
+                    text-md
+                    rounded-full
+                    text-center
+                  "
+                >
+                  Bantu Sekarang
+                </button>
+              </template>
+              <template v-else>
+                <a
+                  target="_blank"
+                  @click="$router.push({ path: '/login' })"
+                  class="
+                    mt-5
+                    button-cta
+                    block
+                    w-full
+                    bg-button-rounded
+                    text-white
+                    font-medium
+                    px-6
+                    py-3
+                    text-md
+                    rounded-full
+                    text-center
+                    cursor-pointer
+                  "
+                >
+                  Login Dulu
+                </a>
+              </template>
             </div>
           </div>
         </div>
@@ -524,132 +462,68 @@
                     0
                   "
                 >
-                  <div class="hidden">
-                    <template v-if="this.$store.state.auth.loggedIn">
-                      <input
-                        class="
-                          border border-gray-500
-                          block
-                          w-full
-                          px-6
-                          py-3
-                          mt-4
-                          rounded-full
-                          text-gray-800
-                          transition
-                          duration-300
-                          ease-in-out
-                          focus:outline-none focus:shadow-outline
-                        "
-                        pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$"
-                        type="number"
-                        placeholder="Jumlah Dalam Rp"
-                        v-model.number="transactions.amount"
-                        @keyup.enter="fund"
-                      />
-                      <button
-                        @click="fund"
-                        class="
-                          mt-3
-                          block
-                          w-full
-                          bg-button-rounded
-                          text-white
-                          font-medium
-                          px-6
-                          py-3
-                          text-md
-                          rounded-full
-                        "
-                      >
-                        Bantu Sekarang
-                      </button>
-                    </template>
-                    <template v-else>
-                      <button
-                        @click="$router.push({ path: '/login' })"
-                        class="
-                          mt-3
-                          button-cta
-                          block
-                          w-full
-                          bg-button-rounded
-                          text-white
-                          font-medium
-                          px-6
-                          py-3
-                          text-md
-                          rounded-full
-                        "
-                      >
-                        Bantu Sekarang
-                      </button>
-                    </template>
-                  </div>
+                  <!-- Terdanai -->
                 </div>
                 <div v-else>
-                  <div class="block">
-                    <template v-if="this.$store.state.auth.loggedIn">
-                      <input
-                        class="input-rp"
-                        required
-                        type="number"
-                        placeholder="Nominal Dalam Rp"
-                        v-model.number="transactions.amount"
-                        @keyup.enter="fund"
-                        :step="campaign.data.min_pembayaran"
-                        :max="
-                          campaign.data.goal_amount -
-                          campaign.data.current_amount
-                        "
-                        :min="campaign.data.min_pembayaran"
-                      />
+                  <template v-if="this.$store.state.auth.loggedIn">
+                    <input
+                      class="input-rp"
+                      required
+                      type="number"
+                      placeholder="Nominal Dalam Rp"
+                      v-model.number="transactions.amount"
+                      @keyup.enter="fund"
+                      :step="campaign.data.min_pembayaran"
+                      :max="
+                        campaign.data.goal_amount - campaign.data.current_amount
+                      "
+                      :min="campaign.data.min_pembayaran"
+                    />
 
-                      <button
-                        @click="fund"
-                        class="
-                          mt-3
-                          button-cta
-                          block
-                          w-full
-                          bg-button-rounded
-                          hover:bg-green-button
-                          text-white
-                          font-medium
-                          px-6
-                          py-3
-                          text-md
-                          rounded-full
-                          text-center
-                        "
-                      >
-                        Bantu Sekarang
-                      </button>
-                    </template>
-                    <template v-else>
-                      <a
-                        target="_blank"
-                        @click="$router.push({ path: '/login' })"
-                        class="
-                          mt-5
-                          button-cta
-                          block
-                          w-full
-                          bg-button-rounded
-                          text-white
-                          font-medium
-                          px-6
-                          py-3
-                          text-md
-                          rounded-full
-                          text-center
-                          cursor-pointer
-                        "
-                      >
-                        Login Dulu
-                      </a>
-                    </template>
-                  </div>
+                    <button
+                      @click="fund"
+                      class="
+                        mt-3
+                        button-cta
+                        block
+                        w-full
+                        bg-button-rounded
+                        hover:bg-green-button
+                        text-white
+                        font-medium
+                        px-6
+                        py-3
+                        text-md
+                        rounded-full
+                        text-center
+                      "
+                    >
+                      Bantu Sekarang
+                    </button>
+                  </template>
+                  <template v-else>
+                    <a
+                      target="_blank"
+                      @click="$router.push({ path: '/login' })"
+                      class="
+                        mt-5
+                        button-cta
+                        block
+                        w-full
+                        bg-button-rounded
+                        text-white
+                        font-medium
+                        px-6
+                        py-3
+                        text-md
+                        rounded-full
+                        text-center
+                        cursor-pointer
+                      "
+                    >
+                      Login Dulu
+                    </a>
+                  </template>
                 </div>
               </div>
             </div>

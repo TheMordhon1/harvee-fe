@@ -219,7 +219,7 @@
                       mb-2
                     "
                   >
-                    Minimal Pembiayaan
+                    Minimal Pembiayaan (per Investor)
                   </label>
                   <div
                     class="
